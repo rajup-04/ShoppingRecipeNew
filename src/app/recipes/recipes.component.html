@@ -2,7 +2,10 @@
     <div class="col-md-5">
         <app-recipe-list></app-recipe-list>
     </div>
-    <div class="col-md-7">
-        <app-recipe-detail></app-recipe-detail>
+    <div class="col-md-7" style="margin-top:50px">
+        <app-recipe-detail [recipe]="recipe" *ngIf="recipe ; else block"></app-recipe-detail>
+        <ng-template #block>
+            <h5 class="text-center">Please select one Recipe !</h5>
+        </ng-template>
     </div>
 </div>
