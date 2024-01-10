@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (selectedItem)="selectedItem=$event"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="selectedItem === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="selectedItem === 'shoppingList'"></app-shopping-list>
       <h2></h2>
     </div>
   </div>

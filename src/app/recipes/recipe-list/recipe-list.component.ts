@@ -26,7 +26,8 @@ export class RecipeListComponent implements OnInit {
           new Ingredient('Salt', 1),
           new Ingredient('Chilli', 2),
 
-        ])
+        ]),
+        
   ];
 
   constructor(){
